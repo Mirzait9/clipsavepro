@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>ClipSavePro - Free Video Downloader | Download YouTube, Facebook, Instagram, TikTok Videos</title>
+    <meta name="description" content="ClipSavePro is the best free video downloader tool. Download videos from YouTube, Facebook, Instagram, TikTok, Twitter in HD quality. No registration required!">
+    <meta name="keywords" content="video downloader, youtube downloader, facebook video downloader, instagram reel downloader, tiktok downloader no watermark, free video downloader, clipsavepro">
+    <meta name="author" content="ClipSavePro">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    
+    <!-- Open Graph for social media -->
+    <meta property="og:title" content="ClipSavePro - Free Video Downloader">
+    <meta property="og:description" content="Download videos from any platform for free. HD quality, fast download, no watermark.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://clipsavepro.onrender.com">
+    <meta property="og:image" content="https://clipsavepro.onrender.com/og-image.jpg">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ClipSavePro - Free Video Downloader">
+    <meta name="twitter:description" content="Download videos from YouTube, Facebook, Instagram, TikTok for free!">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://clipsavepro.onrender.com">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎬</text></svg>">
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- PropellerAds Popunder Ad Code (Replace YOUR_PUBLISHER_ID with your actual ID) -->
+    <script type="text/javascript">
+        (function() {
+            var prop = document.createElement('script');
+            prop.type = 'text/javascript';
+            prop.async = true;
+            prop.src = 'https://YOUR_PUBLISHER_ID.propellerads.com/popup.js';
+            document.head.appendChild(prop);
+        })();
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo">🎬 ClipSavePro</a>
+            <ul class="nav-menu">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#supported-sites">Supported Sites</a></li>
+                <li><a href="/privacy">Privacy</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>ClipSavePro</h1>
+                <p>The Ultimate Free Video Downloader</p>
+                <div class="supported-badges">
+                    <span class="badge">✓ YouTube</span>
+                    <span class="badge">✓ Facebook</span>
+                    <span class="badge">✓ Instagram</span>
+                    <span class="badge">✓ TikTok</span>
+                    <span class="badge">✓ Twitter</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="downloader-section">
+            <div class="container">
+                <!-- Top Banner Ad -->
+                <div class="ad-banner-top" style="margin-bottom: 20px; text-align: center; min-height: 90px;">
+                    <ins class="propeller-ads" data-ad-slot="YOUR_BANNER_SLOT"></ins>
+                </div>
+
+                <div class="downloader-card">
+                    <div class="platform-selector">
+                        <button class="platform-btn active" data-platform="all">🌐 All Platforms</button>
+                        <button class="platform-btn" data-platform="youtube">▶️ YouTube</button>
+                        <button class="platform-btn" data-platform="facebook">📘 Facebook</button>
+                        <button class="platform-btn" data-platform="instagram">📸 Instagram</button>
+                        <button class="platform-btn" data-platform="tiktok">🎵 TikTok</button>
+                    </div>
+
+                    <div class="input-group">
+                        <input type="text" id="urlInput" placeholder="Paste video link here...">
+                        <button id="downloadBtn" class="download-button">
+                            <span class="btn-text">⬇️ Download Now</span>
+                            <span class="loading-spinner" style="display:none;"></span>
+                        </button>
+                    </div>
+
+                    <div class="quality-selector" id="qualitySelector" style="display:none;">
+                        <label>🎯 Select Quality:</label>
+                        <select id="qualitySelect">
+                            <option value="highest">🎥 Highest Quality (1080p/720p)</option>
+                            <option value="lowest">📱 Lowest Quality (360p)</option>
+                            <option value="audio">🎵 Audio Only (MP3)</option>
+                        </select>
+                    </div>
+
+                    <div id="result" class="result" style="display:none;">
+                        <div class="video-info">
+                            <img id="thumbnail" src="" alt="Video thumbnail">
+                            <div class="video-details">
+                                <h3 id="videoTitle"></h3>
+                                <p id="videoMeta"></p>
+                            </div>
+                        </div>
+                        <a href="#" id="downloadLink" class="download-result-btn" target="_blank">
+                            💾 Save Video to Device
+                        </a>
+                    </div>
+
+                    <div id="error" class="error" style="display:none;"></div>
+                </div>
+
+                <!-- Native Ad between downloader and features -->
+                <div class="ad-native" style="margin: 30px 0; text-align: center;">
+                    <div id="propeller-native-ad"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="features-section">
+            <div class="container">
+                <h2>Why Choose ClipSavePro?</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <h3>Lightning Fast</h3>
+                        <p>High-speed servers for instant downloads</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎥</div>
+                        <h3>HD Quality</h3>
+                        <p>Download in 1080p, 4K, and original quality</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🆓</div>
+                        <h3>100% Free</h3>
+                        <p>No registration, no hidden fees</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔒</div>
+                        <h3>Secure & Private</h3>
+                        <p>No logs, no tracking, completely anonymous</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🌍</div>
+                        <h3>Multi-Platform</h3>
+                        <p>Support 10+ social media platforms</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📱</div>
+                        <h3>Mobile Friendly</h3>
+                        <p>Works perfectly on all devices</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="how-it-works" class="how-it-works">
+            <div class="container">
+                <h2>How ClipSavePro Works</h2>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h3>Copy Video Link</h3>
+                        <p>Copy the URL from YouTube, Facebook, Instagram, or TikTok</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h3>Paste Here</h3>
+                        <p>Paste the link in the input box above</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h3>Download</h3>
+                        <p>Click download and save your video instantly</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="supported-sites" class="supported-sites">
+            <div class="container">
+                <h2>Supported Platforms</h2>
+                <div class="sites-grid">
+                    <div class="site">YouTube</div>
+                    <div class="site">Facebook</div>
+                    <div class="site">Instagram</div>
+                    <div class="site">TikTok</div>
+                    <div class="site">Twitter/X</div>
+                    <div class="site">Reddit</div>
+                    <div class="site">Vimeo</div>
+                    <div class="site">Dailymotion</div>
+                    <div class="site">Likee</div>
+                    <div class="site">Twitch</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <h3>❓ Is ClipSavePro free?</h3>
+                        <p>Yes! ClipSavePro is completely free to use. No hidden charges, no premium tiers.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>❓ Do I need to install software?</h3>
+                        <p>No! ClipSavePro works entirely in your browser. No downloads or installations required.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>❓ Is it legal to download videos?</h3>
+                        <p>Downloading videos for personal use is generally acceptable. Please respect copyright laws.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>❓ What qualities are available?</h3>
+                        <p>We support up to 1080p HD for YouTube and original quality for other platforms.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🎬 ClipSavePro</h3>
+                    <p>The best free video downloader tool for all platforms.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#supported-sites">Supported Sites</a></li>
+                        <li><a href="/privacy">Privacy Policy</a></li>
+                        <li><a href="/contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>📧 support@clipsavepro.com</p>
+                    <p>🌐 www.clipsavepro.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 ClipSavePro - All Rights Reserved</p>
+                <p class="disclaimer">⚠️ For personal use only. Please respect copyright laws.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- PropellerAds Native Ad Script -->
+    <script type="text/javascript">
+        (function() {
+            var native = document.createElement('script');
+            native.type = 'text/javascript';
+            native.async = true;
+            native.src = 'https://YOUR_PUBLISHER_ID.propellerads.com/native.js';
+            document.body.appendChild(native);
+        })();
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
